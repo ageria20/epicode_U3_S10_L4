@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap";
+import { Button, Card } from "react-bootstrap";
 
 const SingleBook = props => {
   // state = {
@@ -8,6 +8,7 @@ const SingleBook = props => {
   return (
     <>
       <Card
+        data-testId="card"
         onClick={() => {
           props.changeAsin(props.book.asin);
         }}
@@ -17,6 +18,7 @@ const SingleBook = props => {
         <Card.Body>
           <Card.Title style={{ color: "black" }}>{props.book.title}</Card.Title>
         </Card.Body>
+        <Button as="button">Compra</Button>
       </Card>
     </>
   );

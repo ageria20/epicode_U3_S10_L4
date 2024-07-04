@@ -49,9 +49,9 @@ const CommentArea = props => {
 
   console.log(props.asin);
   return (
-    <>
+    <Container data-testid="comment">
       {props.asin.length > 0 && (
-        <Container className="mb-3">
+        <Container data-testid="comment" className="mb-3">
           <h3>Aggiungi Commento</h3>
           <AddComment asin={props.asin} fetchComments={fetchComments} />
         </Container>
@@ -63,7 +63,7 @@ const CommentArea = props => {
       ) : (
         <Alert> Non sono presenti recensioni </Alert>
       )}
-    </>
+    </Container>
   );
 };
 
