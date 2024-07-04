@@ -8,8 +8,8 @@ describe("verify card color change", () => {
     render(<App />);
 
     const allCard = screen.getAllByTestId("card");
-    // console.log(allCard[0]);
-    fireEvent.click(allCard[0]);
-    expect(allCard).toHaveStyle({ border: "3px solid red" });
+    const card = allCard[0];
+    fireEvent.click(card);
+    expect(card).toHaveStyle({ border: "3px solid red" });
   });
 });
